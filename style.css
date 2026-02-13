@@ -23,18 +23,6 @@ canvas {
     z-index: 1;
 }
 
-.rainbow-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    animation: rainbowGlow 5s linear infinite;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
-}
 
 /* --- UI Overlay --- */
 .container {
@@ -247,4 +235,5 @@ button {
     }
 
 }
+
 
