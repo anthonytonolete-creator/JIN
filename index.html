@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,8 @@
             </div>
 
             <div class="btn-group">
-                <button class="btn-yes" id="yesBtn" onclick="acceptProposal()">Yes, I will!</button>
+                <!-- Removed onclick and replaced with redirect -->
+                <button class="btn-yes" id="yesBtn">Yes, I will!</button>
                 <button class="btn-no" id="noBtn">No</button>
             </div>
         </div>
@@ -30,6 +31,11 @@
 
     <canvas id="scene"></canvas>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            window.location.href = "name.html"; 
+        });
+    </script>
+
 </body>
 </html>
