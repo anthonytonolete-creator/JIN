@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,11 @@
 </head>
 <body>
 
-    <!-- SUCCESS SCREEN -->
-    <div class="success-overlay" id="successScreen" style="display:none;">
+    <div class="success-overlay" id="successScreen">
         <h2>I Knew It! ❤️</h2>
-        <p id="finalMessage">Best Decision Ever</p>
+        <p>Best Decision Ever</p>
     </div>
 
-    <!-- MAIN UI -->
     <div class="container" id="mainUI">
         <div class="content-wrapper">
             <div class="title-box">
@@ -24,57 +22,14 @@
             </div>
 
             <div class="btn-group">
-                <button class="btn-yes" id="yesBtn">Yes, I will!</button>
+                <button class="btn-yes" id="yesBtn" onclick="acceptProposal()">Yes, I will!</button>
                 <button class="btn-no" id="noBtn">No</button>
             </div>
         </div>
     </div>
 
-    <!-- NAME INPUT SECTION (Hidden First) -->
-    <div class="container" id="nameSection" style="display:none;">
-        <div class="content-wrapper" style="text-align:center;">
-            <h2>Yay! ❤️ What's Your Name?</h2>
-
-            <input type="text" id="nameInput" placeholder="Enter your name"
-                style="padding:10px;font-size:16px;border-radius:8px;border:1px solid #ccc;margin-top:10px;">
-
-            <br><br>
-
-            <button onclick="submitName()"
-                style="padding:10px 20px;font-size:16px;border:none;border-radius:8px;background:#ff4d6d;color:white;cursor:pointer;">
-                Submit
-            </button>
-        </div>
-    </div>
-
     <canvas id="scene"></canvas>
 
-    <script>
-        const yesBtn = document.getElementById("yesBtn");
-        const mainUI = document.getElementById("mainUI");
-        const nameSection = document.getElementById("nameSection");
-        const successScreen = document.getElementById("successScreen");
-        const finalMessage = document.getElementById("finalMessage");
-
-        // When YES is clicked
-        yesBtn.addEventListener("click", function() {
-            mainUI.style.display = "none";
-            nameSection.style.display = "flex";
-        });
-
-        function submitName() {
-            const name = document.getElementById("nameInput").value.trim();
-
-            if (name === "") {
-                alert("Please enter your beautiful name ❤️");
-                return;
-            }
-
-            nameSection.style.display = "none";
-            successScreen.style.display = "flex";
-            finalMessage.innerHTML = "I can't wait for our date, " + name + "! 💕";
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
